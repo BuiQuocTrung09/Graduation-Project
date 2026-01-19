@@ -12,6 +12,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
   </head>
 
@@ -21,14 +24,6 @@
         <a class="trangchu" href="#">Trang Chủ</a>
         <a class="gioithieu" href="#">Giới Thiệu</a>
         <a class="danhgia" href="#">Đánh Giá</a>
-        <a class="giohang" href="#"
-          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-            <path
-              fill="#ffffff"
-              d="M320 64C326.6 64 332.9 66.7 337.4 71.5L481.4 223.5L481.9 224L560 224C577.7 224 592 238.3 592 256C592 270.5 582.4 282.7 569.2 286.7L523.1 493.9C516.6 523.2 490.6 544 460.6 544L179.3 544C149.3 544 123.3 523.2 116.8 493.9L70.8 286.7C57.6 282.8 48 270.5 48 256C48 238.3 62.3 224 80 224L158.1 224L158.6 223.5L302.6 71.5C307.1 66.7 313.4 64 320 64zM320 122.9L224.2 224L415.8 224L320 122.9zM240 328C240 314.7 229.3 304 216 304C202.7 304 192 314.7 192 328L192 440C192 453.3 202.7 464 216 464C229.3 464 240 453.3 240 440L240 328zM320 304C306.7 304 296 314.7 296 328L296 440C296 453.3 306.7 464 320 464C333.3 464 344 453.3 344 440L344 328C344 314.7 333.3 304 320 304zM448 328C448 314.7 437.3 304 424 304C410.7 304 400 314.7 400 328L400 440C400 453.3 410.7 464 424 464C437.3 464 448 453.3 448 440L448 328z"
-            />
-          </svg>
-        </a>
         <div id="menu-icon" onclick="mo()">
           <div class="cup"></div>
           <div class="handle"></div>
@@ -39,10 +34,9 @@
       <div class="banner">
         <div class="banner_box">
           <div class="img1">
-            <span class="hero-title">Trải nghiệm hương vị cafe của chúng tôi</span>
+            <span class="hero-title"></span>
             <span class="hero-subtitle"
-              >Mang đến trải nghiệm chân thật nhất <br />
-              ngon đậm vị đến từng giọt cafe</span
+              >Khám phá sản phẩm của chúng tôi </span
             >
             <img src="picture/banner-img.jpeg" alt="Cafe Đậm Vị" />
             <div id="button-menu-hero-banner">
@@ -52,7 +46,7 @@
               <div id="menu-btn">Menu</div>
             </div>
             <div class="span1_p1_box-1">
-              <p class="p1">OUR COFFEE</p>
+              <p class="p1">CHILL COFFEE</p>
               <span class="span1"
                 >Giữa bộn bề phố thị, vẫn có một góc nhỏ dành riêng cho tâm hồn
                 bạn. <br />
@@ -219,10 +213,11 @@ Mình thích nhất là vibe buổi tối, ánh đèn và mùi cà phê rất d�
 <div class="review-stars">★★★★★</div>
 </div>
 
-
+</section>
 </div>
 </div>
 </section>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-brand">
@@ -296,143 +291,30 @@ Mình thích nhất là vibe buổi tối, ánh đèn và mùi cà phê rất d�
         document.getElementById("popup_menu").classList.toggle("action");
       });
 
-      const productsWrapper = document.getElementById("productsWrapper");
-      const carouselPrevBtn = document.getElementById("carouselPrevBtn");
-      const carouselNextBtn = document.getElementById("carouselNextBtn");
-      const cardsContainer = document.querySelectorAll(".sanpham_card");
-
-      let _isSliding = false;
-
-      function getCardOffset() {
-        const firstCard = productsWrapper.firstElementChild;
-        const cardWidth = firstCard.offsetWidth;
-        const gap = parseFloat(
-          window.getComputedStyle(productsWrapper).gap || "0px",
-        );
-        return cardWidth + (isNaN(gap) ? 0 : gap);
-      }
-
-      function rotateCarouselRight() {
-        if (_isSliding) return;
-        const offset = getCardOffset();
-        if (!offset) return;
-        _isSliding = true;
-
-        productsWrapper.style.transition = "transform .6s";
-        productsWrapper.style.transform = `translateX(-${offset}px)`;
-
-        const onTransEnd = (ev) => {
-          if (ev.propertyName !== "transform") return;
-          productsWrapper.removeEventListener("transitionend", onTransEnd);
-
-          const first = productsWrapper.firstElementChild;
-          if (first) productsWrapper.appendChild(first);
-
-          productsWrapper.style.transition = "none";
-          productsWrapper.style.transform = "translateX(0)";
-
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              productsWrapper.style.transition = "all.6s";
-              _isSliding = false;
-            });
-          });
-        };
-
-        productsWrapper.addEventListener("transitionend", onTransEnd);
-      }
-
-      function rotateCarouselLeft() {
-        if (_isSliding) return;
-        const offset = getCardOffset();
-        if (!offset) return;
-        _isSliding = true;
-
-        const last = productsWrapper && productsWrapper.lastElementChild;
-        if (last) {
-          productsWrapper.insertBefore(last, productsWrapper.firstElementChild);
-        }
-
-        productsWrapper.style.transition = "none";
-        productsWrapper.style.transform = `translateX(-${offset}px)`;
-
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            productsWrapper.style.transition = "transform .6s";
-            productsWrapper.style.transform = "translateX(0)";
-          });
-        });
-
-        const onTransEndLeft = (ev) => {
-          if (ev.propertyName !== "transform") return;
-          productsWrapper.removeEventListener("transitionend", onTransEndLeft);
-          productsWrapper.style.transition = "";
-          _isSliding = false;
-        };
-
-        productsWrapper.addEventListener("transitionend", onTransEndLeft);
-      }
-
-      carouselPrevBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        rotateCarouselLeft();
-      });
-
-      carouselNextBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        rotateCarouselRight();
-      });
-
-      (function setupLineDownTicker() {
-        try {
-          const tickers = document.querySelectorAll(".line_down");
-          if (!tickers || tickers.length === 0) return;
-
-          tickers.forEach((lineDown) => {
-            const slide = lineDown.querySelector(".slide");
-            if (!slide) return;
-
-            const inner = document.createElement("div");
-            inner.className = "slide_inner";
-
-            while (slide.firstChild) {
-              inner.appendChild(slide.firstChild);
-            }
-            slide.appendChild(inner);
-
-            inner.innerHTML = inner.innerHTML + inner.innerHTML;
-            const speed = 120;
-
-            requestAnimationFrame(() => {
-              const totalWidth = inner.scrollWidth;
-              const travelPx = totalWidth / 2;
-              const durationSec = Math.max(6, travelPx / speed);
-
-              inner.style.animation = `scrollRight ${durationSec}s linear infinite`;
-
-              inner.style.animationPlayState = "running";
-            });
-
-            slide.addEventListener("mouseenter", () => {
-              inner.style.animationPlayState = "paused";
-            });
-            slide.addEventListener("mouseleave", () => {
-              inner.style.animationPlayState = "running";
-            });
-          });
-        } catch (err) {
-          console.warn("Ticker setup failed:", err);
-        }
-      })();
-
       document.addEventListener("click", (e) => {
         if (!popupMenu.contains(e.target) && !menuIcon.contains(e.target)) {
           popupMenu.classList.remove("action");
           menuIcon.classList.remove("active");
         }
       });
+
+      const sologans = [
+    "Đánh thức giác quan và đắm mình trong không gian yên bình với hương vị cafe đậm đà được chọn lọc dành riêng cho bạn.",
+    "Từ hạt cà phê mộc mạc đến tách espresso nồng nàn, mời bạn ghé chơi để cùng viết tiếp những câu chuyện đầy cảm hứng.",
+    "Khám phá nghệ thuật thưởng thức cafe đích thực qua tầng hương vị độc bản, nơi mỗi tách cà phê là một sự tận tâm.",
+    "Khởi đầu ngày mới bằng hương thơm quyến rũ, nơi chúng tôi trao gửi trọn vẹn tình yêu trong từng giọt cafe nguyên bản."
+];
+
+function ChangeSologans() {
+    const randomIndex = Math.floor(Math.random() * sologans.length);
+    const sologansElement = document.querySelector(".hero-title");
+    console.log("Hàm ChangeSologans đang chạy...");
+    if (sologansElement) {
+        sologansElement.innerText = sologans[randomIndex];
+    }
+}
+
+window.addEventListener('load', ChangeSologans);
     </script>
   </body>
 </html>
