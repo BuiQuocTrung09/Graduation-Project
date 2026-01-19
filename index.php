@@ -18,36 +18,17 @@
   <body>
     <section id="head">
       <div class="head">
-        <a
-          class="trangchu"
-          href="#"
-          style="text-decoration: none; color: inherit"
-          >Trang Chủ</a
-        >
-        <a
-          class="gioithieu"
-          href="#"
-          style="text-decoration: none; color: inherit"
-          >Giới Thiệu</a
-        >
-        <a
-          class="danhgia"
-          href="#"
-          style="text-decoration: none; color: inherit"
-          >Đánh Giá</a
-        >
-        <a
-          class="giohang"
-          href="#"
-          style="text-decoration: none; color: inherit"
+        <a class="trangchu" href="#">Trang Chủ</a>
+        <a class="gioithieu" href="#">Giới Thiệu</a>
+        <a class="danhgia" href="#">Đánh Giá</a>
+        <a class="giohang" href="#"
           ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
             <path
               fill="#ffffff"
               d="M320 64C326.6 64 332.9 66.7 337.4 71.5L481.4 223.5L481.9 224L560 224C577.7 224 592 238.3 592 256C592 270.5 582.4 282.7 569.2 286.7L523.1 493.9C516.6 523.2 490.6 544 460.6 544L179.3 544C149.3 544 123.3 523.2 116.8 493.9L70.8 286.7C57.6 282.8 48 270.5 48 256C48 238.3 62.3 224 80 224L158.1 224L158.6 223.5L302.6 71.5C307.1 66.7 313.4 64 320 64zM320 122.9L224.2 224L415.8 224L320 122.9zM240 328C240 314.7 229.3 304 216 304C202.7 304 192 314.7 192 328L192 440C192 453.3 202.7 464 216 464C229.3 464 240 453.3 240 440L240 328zM320 304C306.7 304 296 314.7 296 328L296 440C296 453.3 306.7 464 320 464C333.3 464 344 453.3 344 440L344 328C344 314.7 333.3 304 320 304zM448 328C448 314.7 437.3 304 424 304C410.7 304 400 314.7 400 328L400 440C400 453.3 410.7 464 424 464C437.3 464 448 453.3 448 440L448 328z"
             />
           </svg>
-          </a
-        >
+        </a>
         <div id="menu-icon" onclick="mo()">
           <div class="cup"></div>
           <div class="handle"></div>
@@ -58,92 +39,21 @@
       <div class="banner">
         <div class="banner_box">
           <div class="img1">
-            <span
-              style="
-                text-align: center;
-                font-size: 50px;
-                position: absolute;
-                color: white;
-                top: 25%;
-                z-index: 1000;
-                left: 50%;
-                transform: translateX(-50%);
-              "
-              >Trải nghiệm hương vị cafe của chúng tôi</span
-            >
-            <span
-              style="
-                text-align: center;
-                font-size: 13px;
-                position: absolute;
-                color: white;
-                top: 38%;
-                z-index: 1000;
-                left: 50%;
-                transform: translateX(-50%);
-              "
+            <span class="hero-title">Trải nghiệm hương vị cafe của chúng tôi</span>
+            <span class="hero-subtitle"
               >Mang đến trải nghiệm chân thật nhất <br />
               ngon đậm vị đến từng giọt cafe</span
             >
             <img src="picture/banner-img.jpeg" alt="Cafe Đậm Vị" />
-            <div
-              id="button-menu-hero-banner"
-              style="
-                position: absolute;
-                top: 42%;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1000;
-                width: 200px;
-                height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-              "
-            >
-              <div
-                id="view-btn"
-                style="
-                  text-align: center;
-                  font-size: 15px;
-                  position: relative;
-                  z-index: 1000;
-                  width: 70px;
-                  height: 32px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  cursor: pointer;
-                "
-              >
+            <div id="button-menu-hero-banner">
+              <div id="view-btn">
                 <span>View</span>
               </div>
-              <div
-                id="menu-btn"
-                style="
-                  text-align: center;
-                  font-size: 15px;
-                  position: relative;
-                  color: white;
-                  z-index: 1000;
-                  width: 70px;
-                  height: 32px;
-                  border-radius: 10px;
-                  border-radius: 10px;
-                  border: 1px solid white;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                Menu
-              </div>
+              <div id="menu-btn">Menu</div>
             </div>
             <div class="span1_p1_box-1">
-              <p class="p1" style="color: white">OUR COFFEE</p>
-              <span class="span1" style="color: white"
+              <p class="p1">OUR COFFEE</p>
+              <span class="span1"
                 >Giữa bộn bề phố thị, vẫn có một góc nhỏ dành riêng cho tâm hồn
                 bạn. <br />
                 Nơi hương cà phê quyện cùng những giai điệu của bình yên.</span
@@ -154,121 +64,15 @@
       </div>
 
       <div class="popup_menu" id="popup_menu">
-        <a href="#" class="trangchu2" style="text-decoration: none"
-          >Trang Chủ
-        </a>
-
-        <a href="#" class="gioithieu2" style="text-decoration: none"
-          >Giới Thiệu</a
-        >
-
-        <a href="#" class="danhgia2" style="text-decoration: none">Đánh Giá</a>
-
-        <a href="Menu1.html" class="giohang2" style="text-decoration: none">Giỏ Hàng</a>
-
-        <a
-          href="dk_dn/register.html"
-          class="taikhoan"
-          style="text-decoration: none"
-          >Tài Khoản</a
-        >
+        <a href="#" class="trangchu2">Trang Chủ</a>
+        <a href="#" class="gioithieu2">Giới Thiệu</a>
+        <a href="#" class="danhgia2">Đánh Giá</a>
+        <a href="Menu1.html" class="giohang2">Giỏ Hàng</a>
+        <a href="dk_dn/register.html" class="taikhoan">Tài Khoản</a>
       </div>
     </section>
 
     <section id="body">
-      <!--
-        <div class="sanpham_box">
-            <div class="products_wrapper" id="productsWrapper">
-                <div class="sanpham_card sanpham1">
-                    <div class="anh_sanpham"><img src="picture/sanpham1.PNG" alt="Espresso Shot"></div>
-                    <div class="ten_sanpham">Espresso Shot</div>
-                    <div class="danhgia_sanpham"><i class="fa-solid fa-star" aria-hidden="true"></i><span>4.5</span>
-                    </div>
-                    <div class="chitiet_sanpham"><span style="color: gray;">Dung tích </span>160ml</div>
-                    <div class="khung_gia_soluong">
-                        <div class="gia_sanpham">150.000</div>
-                        <div class="soluong_sanpham" style="cursor: pointer;"><span>+</span></div>
-                    </div>
-                </div>
-
-                <div class="sanpham_card sanpham2">
-                    <div class="anh_sanpham"><img src="picture/sanpham6.PNG" alt="Cappuccino"></div>
-                    <div class="ten_sanpham">Cappuccino</div>
-                    <div class="danhgia_sanpham"><i class="fa-solid fa-star" aria-hidden="true"></i><span>4.7</span>
-                    </div>
-                    <div class="chitiet_sanpham"><span style="color: gray;">Dung tích </span>200ml</div>
-                    <div class="khung_gia_soluong">
-                        <div class="gia_sanpham">180.000</div>
-                        <div class="soluong_sanpham" style="cursor: pointer;"><span>+</span></div>
-                    </div>
-                </div>
-
-                <div class="sanpham_card sanpham3">
-                    <div class="anh_sanpham"><img src="picture/sanpham7.PNG" alt="Latte"></div>
-                    <div class="ten_sanpham">Latte</div>
-                    <div class="danhgia_sanpham"><i class="fa-solid fa-star" aria-hidden="true"></i><span>4.6</span>
-                    </div>
-                    <div class="chitiet_sanpham"><span style="color: gray;">Dung tích </span>220ml</div>
-                    <div class="khung_gia_soluong">
-                        <div class="gia_sanpham">170.000</div>
-                        <div class="soluong_sanpham" style="cursor: pointer;"><span>+</span></div>
-                    </div>
-                </div>
-
-                <div class="sanpham_card sanpham4">
-                    <div class="anh_sanpham"><img src="picture/sanpham2.PNG" alt="Americano"></div>
-                    <div class="ten_sanpham">Americano</div>
-                    <div class="danhgia_sanpham"><i class="fa-solid fa-star" aria-hidden="true"></i><span>4.4</span>
-                    </div>
-                    <div class="chitiet_sanpham"><span style="color: gray;">Dung tích </span>200ml</div>
-                    <div class="khung_gia_soluong">
-                        <div class="gia_sanpham">140.000</div>
-                        <div class="soluong_sanpham" style="cursor: pointer;"><span>+</span></div>
-                    </div>
-                </div>
-
-                <div class="sanpham_card sanpham5">
-                    <div class="anh_sanpham"><img src="picture/sanpham3.PNG" alt="Mocha"></div>
-                    <div class="ten_sanpham">Mocha</div>
-                    <div class="danhgia_sanpham"><i class="fa-solid fa-star" aria-hidden="true"></i><span>4.8</span>
-                    </div>
-                    <div class="chitiet_sanpham"><span style="color: gray;">Dung tích </span>240ml</div>
-                    <div class="khung_gia_soluong">
-                        <div class="gia_sanpham">190.000</div>
-                        <div class="soluong_sanpham" style="cursor: pointer;"><span>+</span></div>
-                    </div>
-                </div>
-
-                <div class="sanpham_card sanpham6">
-                    <div class="anh_sanpham"><img src="picture/sanpham4.PNG" alt="Irish Coffee"></div>
-                    <div class="ten_sanpham">Irish Coffee</div>
-                    <div class="danhgia_sanpham"><i class="fa-solid fa-star" aria-hidden="true"></i><span>4.7</span>
-                    </div>
-                    <div class="chitiet_sanpham"><span style="color: gray;">Dung tích </span>220ml</div>
-                    <div class="khung_gia_soluong">
-                        <div class="gia_sanpham">195.000</div>
-                        <div class="soluong_sanpham" style="cursor: pointer;"><span>+</span></div>
-                    </div>
-                </div>
-
-                <div class="sanpham_card sanpham7">
-                    <div class="anh_sanpham"><img src="picture/sanpham5.PNG" alt="Lungo"></div>
-                    <div class="ten_sanpham">Lungo</div>
-                    <div class="danhgia_sanpham"><i class="fa-solid fa-star" aria-hidden="true"></i><span>4.5</span>
-                    </div>
-                    <div class="chitiet_sanpham"><span style="color: gray;">Dung tích </span>200ml</div>
-                    <div class="khung_gia_soluong">
-                        <div class="gia_sanpham">160.000</div>
-                        <div class="soluong_sanpham" style="cursor: pointer;"><span>+</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel_controls">
-                <button id="carouselPrevBtn">❮</button>
-                <button id="carouselNextBtn">❯</button>
-            </div>
-        </div>
--->
       <div id="category">
         <div class="options" id="o-1">
           <span class="options-span">Cafe</span>
@@ -315,11 +119,7 @@
 
             <div class="roast-row reverse">
               <div class="roast-image">
-                <img
-                  src="picture/medium_roast.jpg"
-                  alt="Medium Roast Coffee"
-                  style="width: 350px; height: 300px"
-                />
+                <img class="medium-roast-img" src="picture/medium_roast.jpg" alt="Medium Roast Coffee" />
               </div>
               <div class="roast-text">
                 <h3>Medium Roast</h3>
@@ -332,10 +132,7 @@
 
             <div class="roast-row">
               <div class="roast-image">
-                <img
-                  src="picture/medium-dark_roast.jpg"
-                  alt="Medium-Dark Roast Coffee"
-                />
+                <img src="picture/medium-dark_roast.jpg" alt="Medium-Dark Roast Coffee" />
               </div>
               <div class="roast-text">
                 <h3>Medium–Dark Roast</h3>
@@ -348,11 +145,7 @@
 
             <div class="roast-row reverse">
               <div class="roast-image">
-                <img
-                  src="picture/dark_roast.jpg"
-                  alt="Dark Roast Coffee"
-                  style="width: 300px; height: 300px"
-                />
+                <img class="dark-roast-img" src="picture/dark_roast.jpg" alt="Dark Roast Coffee" />
               </div>
               <div class="roast-text">
                 <h3>Dark Roast</h3>
@@ -366,16 +159,6 @@
         </div>
       </div>
 
-      <!--
-        <div class="line_down">
-            <div class="slide">
-                <div class="coffee">Coffee ☕</div>
-                <div class="capuccino">Capuccino ☕</div>
-                <div class="milk_tea">Milk Tea ☕</div>
-                <div class="latte">Latte ☕</div>
-                <div class="mocha">Mocha ☕</div>
-            </div>
-        </div>-->
         <section class="review-section">
             <div id="review-pic-container">
                 <img src="picture/cafe-review-1.jpg" alt="">
@@ -385,7 +168,7 @@
 
 <div class="review-header">
 <h2>Khách Hàng Nói Gì?</h2>
-<p>Những cảm nhận chân thật <br> <span style="margin-left: 20%;text-wrap: nowrap;">từ người đã trải nghiệm Chill Coffee</span></p>
+<p>Những cảm nhận chân thật <br> <span>từ người đã trải nghiệm Chill Coffee</span></p>
 </div>
 
 

@@ -30,6 +30,12 @@ body {
   color: white;
 }
 
+/* moved from inline styles in index.html */
+.head a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @keyframes lammoi {
   from {
     opacity: 0;
@@ -155,12 +161,82 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* moved hero inline styles */
+.img1 .hero-title {
+  text-align: center;
+  font-size: 50px;
+  position: absolute;
+  color: white;
+  top: 25%;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+.img1 .hero-subtitle {
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  color: white;
+  top: 38%;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+/* moved #button-menu-hero-banner inline styles */
+#button-menu-hero-banner {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 200px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 #view-btn {
   background-color: white;
   border-radius: 10px;
   transition: all .4s;
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  z-index: 1000;
+  width: 70px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 #view-btn:hover {
+  transition: all .4s;
+  scale: 1.1;
+}
+
+#menu-btn{
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  color: white;
+  z-index: 1000;
+  width: 70px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#menu-btn:hover{
   transition: all .4s;
   scale: 1.1;
 }
@@ -242,6 +318,7 @@ p {
   );
 }
 
+/* moved p1/span inline color to CSS */
 .p1 {
   text-align: left;
   font-size: 80px;
@@ -251,7 +328,6 @@ p {
   z-index: 1000;
   bottom: 50px;
 }
-
 .span1 {
   position: relative;
   text-align: left;
@@ -260,6 +336,16 @@ p {
   line-height: 1.6;
   font-style: italic;
   bottom: 50px;
+}
+
+/* when p1/span exist inside the banner overlay, show white text */
+.span1_p1_box-1 .p1,
+.img1 .p1 {
+  color: white;
+}
+.span1_p1_box-1 .span1,
+.img1 .span1 {
+  color: white;
 }
 
 .line_1 {
@@ -277,6 +363,11 @@ p {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+.popup_menu a {
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -738,6 +829,18 @@ a:hover {
   object-fit: cover;
 }
 
+/* moved inline roast image sizes */
+.medium-roast-img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
+.dark-roast-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
 .roast-text {
   flex: 1 1 50%;
   color: rgb(61, 55, 55);
@@ -1088,6 +1191,12 @@ a:hover {
   left: 10px;
   top: auto;
   margin-top: -18%;
+}
+
+/* moved the inline span styling */
+.review-header p span{
+  margin-left: 20%;
+  white-space: nowrap;
 }
 
 .review-grid{
