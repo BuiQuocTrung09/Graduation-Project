@@ -2,12 +2,13 @@ html {
   user-select: none;
 }
 body {
-  font-family: "Montserrat", serif;
-  width: 1480px;
-  height: 1000px;
-  overflow-x: hidden;
-  margin: auto;
-  position: relative;
+  font-family: "Montserrat", serif; 
+  width: 100%; 
+  min-height: 100vh; 
+  margin: 0;
+  overflow-x: hidden; 
+  position: relative; 
+  box-sizing: border-box; 
   user-select: none;
 }
 
@@ -144,22 +145,26 @@ body {
   border-radius: 10px;
 }
 
-.banner_box {
-  width: 100%;
-  height: 100%;
-}
-
 .img1 {
   width: 100%;
   height: 100%;
   position: relative;
   border-radius: 10px;
+  inset: 0;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  user-select: none;
+  pointer-events: none;
 }
 
 .img1 img {
   filter: brightness(75%);
   width: 100%;
   height: 100%;
+  object-fit:cover;
+  background-size:cover;
+  object-position:center;
 }
 
 /* moved hero inline styles */
@@ -175,7 +180,7 @@ body {
   width: 70%;
   font-family: 'Birthstone', monospace;
   font-style:italic;
-  animation: fadeIn 1.5s;
+  animation: fadeIn 2.5s;
 }
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -325,7 +330,6 @@ p {
   );
 }
 
-/* moved p1/span inline color to CSS */
 .p1 {
   text-align: left;
   font-size: 80px;
@@ -345,7 +349,6 @@ p {
   bottom: 50px;
 }
 
-/* when p1/span exist inside the banner overlay, show white text */
 .span1_p1_box-1 .p1,
 .img1 .p1 {
   color: white;
@@ -1287,3 +1290,4 @@ a:hover {
 #menu-btn{
   transition: all .4s;
 }
+
