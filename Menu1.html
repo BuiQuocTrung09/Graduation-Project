@@ -8,10 +8,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
     <style>
       html {
         user-select: none;
@@ -250,9 +246,6 @@
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         transition: 0.35s;
       }
-      .product-card:hover {
-        transform: translateY(-6px);
-      }
 
       .product-card img {
         width: 100%;
@@ -388,6 +381,26 @@
           grid-template-columns: 1fr;
         }
       }
+      .buy-btn{
+        background-color: burlywood;
+        color: black;
+        font-family: 'montserrat', serif;
+        font-size:15px;
+        border-collapse: collapse;
+        border: 1px solid black;
+        width: 80px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 7px;
+        margin-left: 0;
+        transition: all .4s;
+        transform: translateY(200%);
+      }
+      .buy-btn:hover{
+        background-color: rgb(232, 185, 124);
+        color: rgb(0, 0, 0);
+        scale: 1.1;
+      }
     </style>
   </head>
   <body>
@@ -443,8 +456,8 @@
         <div class="filter-group">
           <label>Danh mục</label>
           <div class="filter-option"><input type="checkbox" /> Coffee</div>
-          <div class="filter-option"><input type="checkbox" /> Milk Tea</div>
-          <div class="filter-option"><input type="checkbox" /> Cold Brew</div>
+          <div class="filter-option"><input type="checkbox" /> Trà sữa</div>
+          <div class="filter-option"><input type="checkbox" /> Đồ ăn </div>
         </div>
 
         <div class="filter-group">
@@ -466,6 +479,7 @@
             <h4>Latte</h4>
             <p>Thơm – béo nhẹ</p>
             <div class="price">45.000đ</div>
+            <button class="buy-btn">Mua</button>
           </div>
         </div>
 
@@ -477,6 +491,7 @@
             <h4>Cappuccino</h4>
             <p>Đậm vị cà phê</p>
             <div class="price">42.000đ</div>
+            <button class="buy-btn">Mua</button>
           </div>
         </div>
 
@@ -488,6 +503,7 @@
             <h4>Espresso</h4>
             <p>Nguyên chất</p>
             <div class="price">35.000đ</div>
+            <button class="buy-btn">Mua</button>
           </div>
         </div>
       </div>

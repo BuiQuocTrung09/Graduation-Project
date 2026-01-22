@@ -34,20 +34,12 @@
 
       <div class="banner">
           <div class="img1">
-            <img src="picture/banner-img.jpeg" alt="Cafe Đậm Vị" />
+            <div class="name_coffee">Chill Coffee</div>
             <span class="hero-title"></span>
             <span class="hero-subtitle">Khám phá sản phẩm của chúng tôi </span>
             <div id="button-menu-hero-banner">
               <div id="view-btn">View</div>
               <div id="menu-btn">Menu</div>
-            </div>
-            <div class="span1_p1_box-1">
-              <p class="p1">CHILL COFFEE</p>
-              <span class="span1"
-                >Giữa bộn bề phố thị, vẫn có một góc nhỏ dành riêng cho tâm hồn
-                bạn. <br />
-                Nơi hương cà phê quyện cùng những giai điệu của bình yên.</span
-              >
             </div>
           </div>
         </div>
@@ -63,25 +55,8 @@
 <!--BODY-->
     <section id="body">
       <div id="category">
-        <div class="options" id="o-1">
-          <span class="options-span">Cafe</span>
-          <img src="picture/cafe.jpg" />
-        </div>
-        <div class="options" id="o-2">
-          <span class="options-span"
-            >Thức uống <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;không Caffein</span
-          >
-          <img src="picture/cafe-free.jpg" />
-        </div>
-        <div class="options" id="o-3">
-          <span class="options-span">Điểm tâm</span>
-          <img src="picture/cake.jpg" />
-        </div>
-        <div class="options" id="o-4">
-          <span class="options-span">Bữa chính</span>
-          <img src="picture/meal.jpg" />
-        </div>
-      </div>
+
+       </div> 
       <div class="roasting_box">
         <p>Our Roasting</p>
         <p>
@@ -310,6 +285,31 @@ function ChangeSologans() {
 }
 
 window.addEventListener('load', ChangeSologans);
+const head = document.querySelector(".head");
+const observe = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting)
+  {
+    head.style.position = "fixed";
+     head.style.transition = "all .4s"; 
+     head.style.top = "0";
+  }
+  }); 
+  
+}, {threshold: 0.2});
+observe.observe(document.querySelector("#category"));
+observe.observe(document.querySelector(".roasting_box"));
+
+const observe2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting)
+  {
+    head.style.top  = "-100px";
+  }
+  }); 
+  
+}, {threshold: 0.5});
+observe2.observe(document.querySelector(".banner"));
     </script>
   </body>
 </html>

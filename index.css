@@ -13,10 +13,9 @@ body {
 }
 
 .head {
-  max-width: 1480px;
   left: 50%;
   transform: translateX(-50%);
-  position: fixed;
+  position: absolute;
   width: 100%;
   max-height: 60px;
   box-sizing: border-box;
@@ -126,9 +125,8 @@ body {
 #head {
   position: relative;
   margin: auto;
-  width: 100%;
-  height: 1050px;
-  max-width: 1500px;
+  height: 1000px;
+  min-width: 100%;
 }
 
 .banner {
@@ -141,15 +139,17 @@ body {
   align-items: center;
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
-  border-radius: 10px;
+  transform: translateX(-50%);  
+  background-image:url('picture/banner-img.jpeg');
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .img1 {
   width: 100%;
   height: 100%;
   position: relative;
-  border-radius: 10px;
   inset: 0;
   object-fit: cover;
   object-position: center center;
@@ -167,7 +167,6 @@ body {
   object-position:center;
 }
 
-/* moved hero inline styles */
 .img1 .hero-title {
   text-align: center;
   font-size: 50px;
@@ -198,7 +197,6 @@ body {
   width: 90%;
 }
 
-/* moved #button-menu-hero-banner inline styles */
 #button-menu-hero-banner {
   position: absolute;
   top: 42%;
@@ -211,6 +209,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+#view-btn:hover{
+  transition: all .4s;
+  scale: 1.1;
+}
+#menu-btn:hover{
+  transition: all .4s;
+  scale: 1.1;
 }
 
 #view-btn {
@@ -228,10 +235,6 @@ body {
   align-items: center;
   cursor: pointer;
 }
-#view-btn:hover {
-  transition: all .4s;
-  scale: 1.1;
-}
 
 #menu-btn{
   text-align: center;
@@ -247,10 +250,6 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-#menu-btn:hover{
-  transition: all .4s;
-  scale: 1.1;
 }
 
 h1 {
@@ -311,23 +310,17 @@ p {
   align-items: center;
   margin-top: 6%;
 }
-.span1_p1_box-1 {
+.name_coffee {
   position: relative;
-  width: 100%;
-  height: 25 0px;
-  overflow: hidden;
+  font-size: 80px;
+  font-style: bold;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  padding-bottom: 20px;
-  bottom: 340px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(74, 44, 34, 0.826),
-    rgba(62, 39, 31, 0.974)
-  );
+  margin: auto;
+  left: 50%;
+  transform: translate(-50%, 120%);
+  color: white;
 }
 
 .p1 {
@@ -465,214 +458,6 @@ a:hover {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
-
-/*
-.sanpham_box {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  transition: all 0.6s;
-  height: 1000px;
-}
-
-.carousel_controls {
-  position: absolute;
-  width: 105%;
-  max-width: 1510px;
-  height: 200px;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 150px;
-}
-.carousel_controls button {
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  font-size: 100px;
-  opacity: 0.5;
-  transition: all 0.3s ease;
-  pointer-events: auto;
-  z-index: 20;
-  border: none;
-  background-color: transparent;
-}
-.carousel_controls button:hover {
-  background-color: transparent;
-}
-
-.carousel_controls button:active {
-  background-color: transparent;
-}
-
-.products_wrapper {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-  will-change: transform;
-  width: 100%;
-  transition: all 0.6s; 
-  position: relative;
-  top: 10%;
-}
-
-.sanpham_card {
-  flex-shrink: 0;
-  width: 300px;
-  height: 450px;
-  background-color: #3b2c26;
-  font-family: "Montserrat", sans-serif;
-  transition: all 0.6s;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  opacity: 1;
-  z-index: 250;
-  cursor: pointer;
-  pointer-events: all;
-}
-
-.sanpham_card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
-}
-
-.anh_sanpham {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background-color: chocolate;
-  position: relative;
-  margin: 0 auto;
-  margin-top: -90px;
-  z-index: 1000;
-}
-
-.sanpham1,
-.sanpham2,
-.sanpham3,
-.sanpham4,
-.sanpham5,
-.sanpham6,
-.sanpham7 {
-  width: 350px;
-  height: 450px;
-  background-color: #3b2c26;
-}
-
-.anh_sanpham img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.ten_sanpham {
-  color: white;
-  font-size: 35px;
-  font-style: bold;
-  display: flex;
-  justify-content: left;
-  padding: 5px 20px;
-  margin: 30px 0;
-}
-
-.danhgia_sanpham {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  width: 80px;
-  height: 30px;
-  background-color: gray;
-  opacity: 0.7;
-  margin: 0px 20px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.danhgia_sanpham i {
-  position: static !important;
-  z-index: auto !important;
-  color: #ffffff;
-  font-size: 15px;
-}
-
-.danhgia_sanpham span {
-  color: white;
-  font-size: 15px;
-  opacity: 1;
-  margin: 0;
-}
-
-.chitiet_sanpham {
-  color: white;
-  font-size: 15px;
-  display: flex;
-  justify-content: left;
-  margin: 20px 20px;
-  gap: 10px;
-}
-
-.khung_gia_soluong {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30px 20px;
-  width: 90%;
-  height: 50px;
-  border: 1px solid white;
-  position: relative;
-  cursor: pointer;
-  pointer-events: all;
-}
-
-.gia_sanpham {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  color: white;
-  font-family: monospace;
-  font-size: 30px;
-  font-style: bold;
-  padding: 10px 20px;
-  cursor: pointer;
-  pointer-events: all;
-}
-
-.soluong_sanpham {
-  width: 50px;
-  height: 100%;
-  position: relative;
-  right: 0;
-  display: flex;
-  justify-content: right;
-  align-content: flex-end;
-  background-color: #ffffff;
-  cursor: pointer;
-  cursor: pointer;
-  pointer-events: all;
-}
-
-.soluong_sanpham span {
-  font-size: 40px;
-  font-family: "Courier New", Courier, monospace;
-  color: black;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  cursor: pointer;
-}
-*/
 
 #category {
   position: relative;
@@ -1167,7 +952,7 @@ a:hover {
           grid-template-columns: 1fr;
         }
       }
-      .review-section{
+.review-section{
   background:#ffffff;
   color:#eaeaea;
   padding:80px 20px;
@@ -1290,4 +1075,3 @@ a:hover {
 #menu-btn{
   transition: all .4s;
 }
-
