@@ -9,7 +9,6 @@ body {
   overflow-x: hidden; 
   position: relative; 
   box-sizing: border-box; 
-  user-select: none;
 }
 
 .head {
@@ -154,8 +153,6 @@ body {
   object-fit: cover;
   object-position: center center;
   display: block;
-  user-select: none;
-  pointer-events: none;
 }
 
 .img1 img {
@@ -464,24 +461,7 @@ a:hover {
   top: 10px;
   width: 100%;
   max-width: 1500px;
-  height: 885px;
-  background-color: rgb(242, 233, 215);
-  display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-}
-#category div {
-  width: 720px;
-  height: 420px;
-  background-color: orange;
-  position: relative;
-  transition: 0.3s ease-in-out;
-}
-#category div:hover {
-  scale: 1.02;
-  transition: 0.3s ease-in-out;
-  filter: brightness(70%);
+  height: 1000px;
 }
 .options img {
   width: 100%;
@@ -517,43 +497,6 @@ a:hover {
 }
 #o-3 img {
   object-position: center 20%;
-}
-.tim_kiem {
-  display: flex;
-  align-items: center;
-  background: rgba(240, 235, 228, 0.95);
-  border: 1px solid rgba(200, 185, 170, 0.8);
-  height: 44px;
-  box-shadow: none;
-  box-sizing: border-box;
-  width: 260px;
-  flex-shrink: 0;
-  margin-left: 5%;
-}
-
-.tim_kiem input[type="text"] {
-  border: none;
-  outline: none;
-  background: transparent;
-  width: calc(100% - 44px);
-  height: 100%;
-  font-size: 14px;
-  color: #2b2b2b;
-  padding: 0 6px;
-}
-
-.tim_kiem button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 100%;
-  background: #3b2c26;
-  color: #fff;
-  border: none;
-  padding: 0;
-  border-radius: 0;
-  cursor: pointer;
 }
 
 .roasting_box {
@@ -624,7 +567,6 @@ a:hover {
   object-fit: cover;
 }
 
-/* moved inline roast image sizes */
 .medium-roast-img {
   width: 350px;
   height: 300px;
@@ -1074,4 +1016,120 @@ a:hover {
 }
 #menu-btn{
   transition: all .4s;
+}
+.first_product{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  transition: all .4s;
+}
+.img_product{
+  background-image: url("picture/cafe-review-1.jpg");
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeats;
+  background-size: cover;
+  transition: all .8s ease-out;
+  opacity: 0;
+}
+.img_product:hover{
+  transition: all .4s;
+  filter: brightness(80%);
+}
+.img_product.animation1{
+  opacity: 1;
+  transform: translateX(0);
+}
+.describe{
+  width: 60%;
+  height: 100%;
+  right: -3%;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 1.5s ease-out;
+}
+.describe.animation2{
+opacity: 1;
+right: 0%;
+}
+.describe span{
+  font-size: 80px;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  right: 5%;
+}
+.describe h2{
+  font-style: italic;
+}
+.describe p{
+  font-style: italic;
+}
+.second_product{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  transition: all .4s;
+}
+.img_product2{
+  background-image: url("picture/cafe-free.jpg");
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  height: 100%;
+  right: 0;
+  background-position: center;
+  background-repeat: no-repeats;
+  background-size: cover;
+  transition: all .8s ease-out;
+  opacity: 0;
+}
+.img_product2:hover{
+  transition: all .4s;
+  filter: brightness(80%);
+}
+.describe2{
+  width: 60%;
+  height: 100%;
+  left: -3%;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1.5s ease-out;
+  opacity: 0;
+}
+.describe2 span{
+  font-size: 80px;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 3;
+  top: 20%;
+  left: 5%;
+  transform: rotate(180deg);
+}
+.describe2 h2{
+  font-style: italic;
+}
+.describe2 p{
+  font-style: italic;
+}
+.describe2.animation4{
+opacity: 1;
+left: 0%;
+}
+.img_product2.animation3{
+  opacity: 1;
+  transform: translateX(0);
 }

@@ -55,7 +55,22 @@
 <!--BODY-->
     <section id="body">
       <div id="category">
-
+        <div class="first_product">
+          <div class="img_product"></div>
+          <div class="describe">
+            <h2>"Đánh thức cảm xúc, gói gọn trong từng giọt cà phê."</h2>
+            <span>,,</span><br>
+            <p>Giữa nhịp sống hối hả, hãy dành cho mình một khoảng lặng. Một tách cà phê ngon không chỉ là thức uống, đó là khởi đầu của những câu chuyện và là nơi cảm xúc được vỗ về.</p>
+          </div>
+        </div>
+        <div class="second_product">
+          <div class="img_product2"></div>
+          <div class="describe2">
+            <h2>“Tinh hoa được chọn lọc dành cho gu khác biệt.”</h2>
+            <span>,,</span><br>
+            <p>Mỗi chi tiết đều được chăm chút kỹ lưỡng, từ chất lượng bên trong đến cảm giác khi trải nghiệm — dành cho những ai trân trọng giá trị thật và chuẩn mực tinh tế.</p>
+          </div>
+        </div>
        </div> 
       <div class="roasting_box">
         <p>Our Roasting</p>
@@ -278,7 +293,7 @@ Mình thích nhất là vibe buổi tối, ánh đèn và mùi cà phê rất d�
 function ChangeSologans() {
     const randomIndex = Math.floor(Math.random() * sologans.length);
     const sologansElement = document.querySelector(".hero-title");
-    console.log("Hàm ChangeSologans đang chạy...");
+    console.log("dang chay ham");
     if (sologansElement) {
         sologansElement.innerText = sologans[randomIndex];
     }
@@ -298,7 +313,6 @@ const observe = new IntersectionObserver((entries) => {
   
 }, {threshold: 0.2});
 observe.observe(document.querySelector("#category"));
-observe.observe(document.querySelector(".roasting_box"));
 
 const observe2 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -310,6 +324,55 @@ const observe2 = new IntersectionObserver((entries) => {
   
 }, {threshold: 0.5});
 observe2.observe(document.querySelector(".banner"));
+
+const observer_img_product = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting)
+  {
+    const img_product = document.querySelector(".img_product");
+    img_product.classList.add("animation1");
+  }
+  });
+}, {threshold: 0.4});
+observer_img_product.observe(document.querySelector("#category"));
+
+
+const observer_describe = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting)
+  {
+    const describe = document.querySelector(".describe");
+    describe.classList.add("animation2");
+  }
+  });
+}, {threshold: 0.4});
+observer_describe.observe(document.querySelector("#category"));
+
+
+const observer_img_product2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting)
+  {
+   const img_product2 = document.querySelector(".img_product2");
+   img_product2.classList.add("animation3");
+  }
+  });
+}, {threshold: 0.6});
+observer_img_product2.observe(document.querySelector("#category"));
+
+
+ const observer_describe2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting)
+  {
+    const describe2 = document.querySelector(".describe2");
+    describe2.classList.add("animation4");
+  }
+  });
+}, {threshold: 0.6});
+ observer_describe2.observe(document.querySelector("#category")); 
+
+
     </script>
   </body>
 </html>
