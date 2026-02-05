@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 200px;
+            background-color: red;
+            margin-top: 300px;
+        }
+        .box2{
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box3{
+            width: 500px;
+            height: 200px;
+            background-color: green;
+        }
+        .box4{
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+        }
+        .all{
+            position: relative;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+            font-family: monospace;
+            font-size: 50px;
+            width: 20%;
+            height: 15%;
+            outline: none;
+            border: none;
+            transition: all .4s;
+        }
+        #btn:hover{
+            cursor: pointer;
+            scale: 1.2;
+            transition: all .4s;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <a id="btn" href="#box2">click to scroll to blue</a>
+    <div class="all">
+    
+        <nav class="box1"></nav>
+    
+        <nav class="box2" id="box2"></nav>
+    
+        <nav class="box3"></nav>
+    
+        <nav class="box4"></nav>
+
+    </div>
+</body>
+</html>

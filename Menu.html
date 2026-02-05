@@ -13,10 +13,6 @@
         user-select: none;
         scroll-behavior: smooth;
       }
-      body section:nth-child(1) {
-        width: 100%;
-        height: 600px;
-      }
       body {
         width: 100%;
         height: 100%;
@@ -176,8 +172,10 @@
         transition: all 0.4s;
       }
       .hero {
-        background-image: url("picture/head_banner.jpg");
+        background-image: url("picture/banner-img.jpeg");
         background-size: cover;
+        max-width: 100%;
+        height: 800px;
       }
 
       * {
@@ -406,7 +404,7 @@
   <body>
     <section class="hero">
       <div class="head">
-        <a href="#">Trang Chủ</a>
+        <a href="index.html">Trang Chủ</a>
         <a href="#">Giới Thiệu</a>
         <a href="#">Đánh Giá</a>
         <div id="menu-icon" onclick="mo()">

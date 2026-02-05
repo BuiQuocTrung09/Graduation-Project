@@ -458,10 +458,11 @@ a:hover {
 
 #category {
   position: relative;
-  top: 10px;
   width: 100%;
-  max-width: 1500px;
   height: 1000px;
+  margin:0;
+  box-sizing:border-box;
+  top: 10px;
 }
 .options img {
   width: 100%;
@@ -503,19 +504,18 @@ a:hover {
   width: 100%;
   height: 30%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   position: relative;
 }
 
-.roasting_box p:first-child {
+.roasting_box p:nth-child(1) {
   font-size: 60px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: rgb(61, 55, 55);
 }
 
-.roasting_box p:last-child {
+.roasting_box_2 {
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
@@ -930,7 +930,6 @@ a:hover {
   margin-top: -18%;
 }
 
-/* moved the inline span styling */
 .review-header p span{
   margin-left: 20%;
   white-space: nowrap;
@@ -1087,6 +1086,7 @@ right: 0%;
   width: 40%;
   height: 100%;
   right: 0;
+  top: -35px;
   background-position: center;
   background-repeat: no-repeats;
   background-size: cover;
@@ -1132,4 +1132,90 @@ left: 0%;
 .img_product2.animation3{
   opacity: 1;
   transform: translateX(0);
+}
+.first_product,.second_product{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1100px;
+  margin:24px auto;
+  box-sizing:border-box;
+}
+.logo{
+width: 60px;
+height: 60px;
+position: absolute;
+left: 2%;
+overflow: hidden;
+
+}
+.logo img{
+  background-position: center;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.others{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+}
+.advertise_discount{
+  position: fixed;
+  width: 800px;
+  height: 400px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+}
+.advertise_discount img{
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.advertise_discount button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transition: all .4s;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  font-style: bold;
+}
+.advertise_discount button:hover{
+  filter: brightness(70%);
+  transition: all .4s;
+  cursor: pointer;
+}
+.advertise_discount.close-ani{
+  transition: all .4s;
+  opacity: 0;
+  filter: none;
+  backdrop-filter: none; 
+}
+.others.blur{
+  opacity: 1;
+  visibility: visible;
 }

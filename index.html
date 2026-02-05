@@ -12,16 +12,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body>
-    <!--HEAD-->
+  <body id="whole_body">
+<!--HEAD-->
     <section id="head">
       <div class="head">
+        <div class="logo">
+          <img src="picture/logo.PNG">
+        </div>
         <a class="trangchu" href="#">Trang Chủ</a>
         <a class="gioithieu" href="#">Giới Thiệu</a>
         <a class="danhgia" href="#">Đánh Giá</a>
@@ -48,7 +49,7 @@
         <a href="#" class="trangchu2">Trang Chủ</a>
         <a href="#" class="gioithieu2">Giới Thiệu</a>
         <a href="#" class="danhgia2">Đánh Giá</a>
-        <a href="Menu1.html" class="giohang2">Giỏ Hàng</a>
+        <a href="Menu.html" class="giohang2">Giỏ Hàng</a>
         <a href="dk_dn/register.html" class="taikhoan">Tài Khoản</a>
       </div>
     </section>
@@ -73,72 +74,14 @@
         </div>
        </div> 
       <div class="roasting_box">
-        <p>Our Roasting</p>
-        <p>
+    <!--    <p id="roasting_box_p2">
           A warm cup of coffee cradled in both hands — its steam rises like a
           quiet invitation, carrying soft notes of caramel, toasted almond, and
           a whisper of citrus
-        </p>
-
-        <div class="roasting_img_box">
-          <div class="roast-staggered">
-            <div class="roast-row">
-              <div class="roast-image">
-                <img src="picture/light_roast.jpg" alt="Light Roast Coffee" />
-              </div>
-              <div class="roast-text">
-                <h3>Light Roast</h3>
-                <p>
-                  Bright and delicate, our Light Roast highlights floral and
-                  citrus notes — ideal for those who appreciate subtle acidity
-                  and a lively finish.
-                </p>
-              </div>
-            </div>
-
-            <div class="roast-row reverse">
-              <div class="roast-image">
-                <img class="medium-roast-img" src="picture/medium_roast.jpg" alt="Medium Roast Coffee" />
-              </div>
-              <div class="roast-text">
-                <h3>Medium Roast</h3>
-                <p>
-                  Balanced and smooth, Medium Roast presents caramel sweetness
-                  with a rounded body that fits most palates.
-                </p>
-              </div>
-            </div>
-
-            <div class="roast-row">
-              <div class="roast-image">
-                <img src="picture/medium-dark_roast.jpg" alt="Medium-Dark Roast Coffee" />
-              </div>
-              <div class="roast-text">
-                <h3>Medium–Dark Roast</h3>
-                <p>
-                  Richer and more pronounced, this roast reveals chocolate and
-                  toasted notes while keeping a pleasant acidity.
-                </p>
-              </div>
-            </div>
-
-            <div class="roast-row reverse">
-              <div class="roast-image">
-                <img class="dark-roast-img" src="picture/dark_roast.jpg" alt="Dark Roast Coffee" />
-              </div>
-              <div class="roast-text">
-                <h3>Dark Roast</h3>
-                <p>
-                  Bold and smoky, Dark Roast emphasizes bittersweet cocoa and
-                  roasted caramel — perfect for lovers of full-bodied coffee.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </p> -->       
       </div>
 
-        <section class="review-section">
+       <!-- <section class="review-section"> 
             <div id="review-pic-container">
                 <img src="picture/cafe-review-1.jpg" alt="">
         </div>
@@ -197,11 +140,10 @@ Mình thích nhất là vibe buổi tối, ánh đèn và mùi cà phê rất d�
 </div>
 <div class="review-stars">★★★★★</div>
 </div>
-
-</section>
-</div>
 </div>
 </section>
+-->
+    </section>
 <!--FOOTER-->
     <footer class="footer">
       <div class="footer-container">
@@ -222,9 +164,9 @@ Mình thích nhất là vibe buổi tối, ánh đèn và mùi cà phê rất d�
           <h4>Sản phẩm</h4>
           <ul>
             <li><a href="#">Cà phê truyền thống</a></li>
-            <li><a href="#">Cold Brew</a></li>
-            <li><a href="#">Signature Drinks</a></li>
-            <li><a href="#">Hạt rang xay</a></li>
+            <li><a href="#">Expresso</a></li>
+            <li><a href="#">Bánh ngọt</a></li>
+            <li><a href="#">Cafe phin</a></li>
           </ul>
         </div>
 
@@ -250,16 +192,22 @@ Mình thích nhất là vibe buổi tối, ánh đèn và mùi cà phê rất d�
 
       <div class="footer-bottom">© 2025 Chill Coffee. All rights reserved.</div>
     </footer>
-
+<!--ADVERTISE-->
+<div class="others">
+  <div class="advertise_discount">
+    <button id="btn-close-advertise"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"/></svg></button>
+    <img src="picture/banner_discount.png" alt="advertise">
+  </div> 
+</div>
     <script>
       const view_btn = document.getElementById("view-btn");
       const menu_btn = document.getElementById("menu-btn");
 
       view_btn.addEventListener("click", () => {
-        window.location.href = "Menu1.html";
+        window.location.href = "Menu.html";
       });
       menu_btn.addEventListener("click", () => {
-        window.location.href = "menu.html";
+        
       });
 
       const popupMenu_container = document.querySelector(
@@ -306,8 +254,8 @@ const observe = new IntersectionObserver((entries) => {
     if(entry.isIntersecting)
   {
     head.style.position = "fixed";
-     head.style.transition = "all .4s"; 
-     head.style.top = "0";
+    head.style.transition = "all .4s"; 
+    head.style.top = "0";
   }
   }); 
   
@@ -333,7 +281,7 @@ const observer_img_product = new IntersectionObserver((entries) => {
     img_product.classList.add("animation1");
   }
   });
-}, {threshold: 0.4});
+}, {threshold: 0.2});
 observer_img_product.observe(document.querySelector("#category"));
 
 
@@ -345,7 +293,7 @@ const observer_describe = new IntersectionObserver((entries) => {
     describe.classList.add("animation2");
   }
   });
-}, {threshold: 0.4});
+}, {threshold: 0.2});
 observer_describe.observe(document.querySelector("#category"));
 
 
@@ -372,7 +320,29 @@ observer_img_product2.observe(document.querySelector("#category"));
 }, {threshold: 0.6});
  observer_describe2.observe(document.querySelector("#category")); 
 
+document.querySelector(".logo").addEventListener("click", () => {
+  location.reload();
+});
 
+window.onload = function() {
+  const overlay = document.querySelector(".others");
+  const closeBtn = document.getElementById("btn-close-advertise");
+  const AD = document.querySelector(".advertise_discount");
+
+  overlay.classList.add('blur');
+
+  closeBtn.onclick = function(event) {
+    AD.classList.add('close-ani');
+    overlay.classList.remove('blur');
+  };
+
+  window.onclick = function(event) {
+    if(event.target == overlay)
+  {
+    overlay.classList.remove('blur');
+  }
+  };
+};
     </script>
   </body>
 </html>
