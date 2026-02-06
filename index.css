@@ -1219,3 +1219,102 @@ overflow: hidden;
   opacity: 1;
   visibility: visible;
 }
+.banner_coffee{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(to bottom, white, rgba(239, 218, 183, 0.795), white) ;
+}
+.shape_for_banner{
+  width: 700px;
+  height: 400px;
+  background-color: brown;
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  z-index: 2;
+  border-radius: 0% 100% 0% 100% / 0% 100% 0% 100% ;
+  background-image: url(picture/anh_gioi_thieu.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner_section {
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner_container {
+  display: flex;
+  align-items: center;
+  gap: 50px; 
+  max-width: 1100px;
+}
+
+.shape_for_banner {
+  position: relative;
+  width: 450px;
+  height: 350px;
+  box-shadow: 10px 10px 50px rgb(41, 40, 40);
+}
+
+.shape_for_banner_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 58% 42% 41% 59% / 64% 21% 79% 36%; 
+  overflow: hidden;
+  box-shadow: 20px 20px 60px rgba(0,0,0,0.05); 
+  border: 1px solid rgba(75, 54, 33, 0.1);
+}
+
+.shape_for_banner_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coffee_bean {
+  position: absolute;
+  background-color: #4B3621;
+  width: 12px;
+  height: 16px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  opacity: 0.3;
+  animation: float 4s ease-in-out infinite;
+}
+
+.bean_1 { 
+  top: -10px; right: 20px;
+ }
+.bean_2 { 
+  bottom: 20px; left: -10px; animation-delay: 2s; 
+}
+
+@keyframes float {
+  0%{ transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.banner_content h2 {
+  font-family: "montserrat", serif; 
+  font-size: 2.5rem;
+  color: #4B3621;
+  margin-bottom: 15px;
+}
+
+.order_btn {
+  display: inline-block;
+  padding: 12px 30px;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px; 
+  background-color: #6F4E37;
+  transition: all .4s;
+}
+.order_btn:hover {
+  transition: all .4s;
+  scale: 1.1;
+}
