@@ -2,7 +2,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "login_register";
+$database = "ChillCafe_Database";
 
 $conn = new mysqli($host, $username, $password, $database);
 
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 function createUsersTable($connection) {
-    $sql = "CREATE TABLE IF NOT EXISTS users (
+    $sql = "CREATE TABLE IF NOT EXISTS userdata (
         id INT(11) AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(50) NOT NULL UNIQUE,
         email VARCHAR(100) NOT NULL UNIQUE,

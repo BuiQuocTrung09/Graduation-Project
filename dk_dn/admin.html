@@ -1,17 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="additem.php" method="post">
-        <input type="text" name="product_name">
-        <input type="text" name="product_price">
-        <input type="file" name="product_image">
-        <input type="text" name="product_describe">
-        <input type="submit">
-    </form>
-</body>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm Món Mới</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+    rel="stylesheet" />
+    <style>
+        h1{
+            font-family: "Montserrat", serif;
+        }
+      body {
+        font-family: "Montserrat", serif;
+        background-color: #fdf5e6;
+        color: #332c2b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .cafe-container {
+        background: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(111, 78, 55, 0.1);
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .form-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .form-header h1 {
+        font-family: "Playfair Display", serif;
+        color: #6f4e37;
+        margin-bottom: 10px;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1.5px solid #eee;
+        border-radius: 10px;
+        font-family: inherit;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #a67b5b;
+        box-shadow: 0 0 0 4px rgba(166, 123, 91, 0.1);
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 15px;
+        background-color:#6f4e37;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          background 0.3s;
+      }
+
+      .btn-submit:hover {
+        background-color: #5d402e;
+        transform: translateY(-2px);
+      }
+
+      .btn-submit:active {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cafe-container">
+      <div class="form-header">
+        <h1>☕ Thêm Món Vào Menu</h1>
+        <p>Cập nhật những hương vị mới nhất cho quán của bạn</p>
+      </div>
+
+      <form
+        action="additem.php"
+        method="post"
+        class="cafe-form"
+      >
+        <div class="input-group">
+          <label for="product_name">Tên sản phẩm</label>
+          <input
+            type="text"
+            id="product_name"
+            name="product_name"
+            placeholder="Ví dụ: Bạc xỉu cốt dừa..."
+            required
+          />
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label for="product_price">Giá bán (VNĐ)</label>
+            <input
+              type="number"
+              id="product_price"
+              name="product_price"
+              placeholder="25000"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="product_image">Hình ảnh món ăn</label>
+            <div class="file-input-wrapper">
+              <input
+                type="file"
+                id="product_image"
+                name="product_image"
+                accept="image/*"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="product_describe">Mô tả hương vị</label>
+          <textarea
+            id="product_describe"
+            name="product_describe"
+            rows="4"
+            placeholder="Hương vị đậm đà, thơm nồng từ hạt Arabica..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span>Xác Nhận Thêm Món</span>
+        </button>
+      </form>
+    </div>
+  </body>
 </html>

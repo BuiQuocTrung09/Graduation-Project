@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "products";
+$database = "chillcoffee_database";
 
 $conn = new mysqli($host, $user, $pass);
 if($conn->connect_error){

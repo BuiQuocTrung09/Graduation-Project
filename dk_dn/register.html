@@ -10,17 +10,17 @@
 
 <div class="auth-container">
 
-    <form class="form" method="post" action="reg.php">
+    <form class="form" method="post" action="register.php">
         <h2>Đăng Ký</h2>
 
         <div class="input-group">
             <label>Họ và Tên</label>
-            <input type="text" name="name" placeholder="Nhập tên của bạn" required>
+            <input type="text" name="username" placeholder="Nhập tên của bạn" required>
         </div>
 
         <div class="input-group">
             <label>Số điện thoại</label>
-            <input type="text" name="phone" placeholder="Nhập số điện thoại">
+            <input type="text" name="user_hotline" placeholder="Nhập số điện thoại">
         </div>
 
         <div class="input-group">
@@ -30,7 +30,7 @@
 
         <div class="input-group password-group">
             <label>Mật khẩu</label>
-            <input type="password" id="password-dk" name="password" placeholder="Tạo mật khẩu" required>
+            <input type="password" id="password-dk" name="user_password" placeholder="Tạo mật khẩu" required>
             <span class="toggle" onclick="togglePassword('password-dk')">👁</span>
         </div>
 
