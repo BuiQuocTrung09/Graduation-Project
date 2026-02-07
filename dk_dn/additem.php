@@ -2,28 +2,22 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "chillcoffee_database";
+$database = "chillcafe_database";
 
-$conn = new mysqli($host, $user, $pass);
+$conn = new mysqli($host, $user, $pass, $database);
 if($conn->connect_error){
     die("Lỗi kết nối database" .$conn->connect_error);
 }
 
 $database_sql = "CREATE DATABASE IF NOT EXISTS $database";
 
-if($conn->query($database_sql)){
-    echo "Tạo database thành công";
-}else{
-    die("Tạo database thất bại" .$conn->error);
-}
-
 $conn->select_db($database);
 
-$datatable_sql = "CREATE TABLE IF NOT EXISTS items(
+$datatable_sql = "CREATE TABLE IF NOT EXISTS products(
     id INT(10) AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(60),
     product_price VARCHAR(60),
-    product_image VARCHAR(255),
+    product_img VARCHAR(255),
     product_describe VARCHAR(60)
 )";
 
@@ -35,10 +29,10 @@ if($conn->query($datatable_sql)){
 
 $p_name = $_POST['product_name'];
 $p_price = $_POST['product_price'];
-$p_image = $_POST['product_image'];
+$p_image = $_POST['product_img'];
 $p_describe = $_POST['product_describe'];
 
-$data = "INSERT INTO items(`product_name`,`product_price`,`product_image`,`product_describe`) VALUES('$p_name','$p_price','$p_image','$p_describe')";
+$data = "INSERT INTO products (`product_name`,`product_price`,`product_img`,`product_describe`) VALUES('$p_name','$p_price','$p_image','$p_describe')";
 
 
 if($conn->query($data)){

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="vi">
 
@@ -429,204 +432,232 @@
       color: rgb(0, 0, 0);
       scale: 1.1;
     }
+
     .checkout-section {
-    background-color: #fdfaf5;
-    padding: 50px 0;
-    font-family: 'Arial', sans-serif;
-    color: #332d2d;
-}
-
-.checkout-container {
-    display: flex;
-    max-width: 1300px;
-    margin: 0 auto;
-    gap: 40px;
-    padding: 0 20px;
-}
-
-.order-summary-aside {
-    flex: 0 0 350px;
-}
-
-.summary-sticky {
-    position: sticky;
-    top: 20px;
-    background: #ffffff;
-    border: 1px solid #e8e2d6;
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-}
-
-.aside-title {
-    margin-top: 0;
-    border-bottom: 2px solid #f1c40f;
-    padding-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.info-group {
-    margin-bottom: 15px;
-}
-
-.info-group label {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.info-group textarea, 
-.info-group input, 
-.info-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fafafa;
-    box-sizing: border-box;
-}
-
-.total-price-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    padding: 15px 0;
-    border-top: 1px dashed #ccc;
-}
-
-.total-price-box strong {
-    font-size: 1.4rem;
-    color: #d35400;
-}
-
-.btn-main-pay {
-    width: 100%;
-    background: #d35400;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.btn-buy-more {
-    width: 100%;
-    background: transparent;
-    color: #666;
-    border: 1px solid #999;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.cart-content-main {
-    flex: 1;
-}
-
-.section-title {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-}
-
-.items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.food-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.food-card:hover {
-    transform: translateY(-5px);
-}
-
-.img-placeholder {
-    width: 100%;
-    height: 150px;
-    background: #eee;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-    margin-bottom: 15px;
-}
-
-.food-info h4 {
-    margin: 10px 0 5px;
-    font-size: 1.1rem;
-}
-
-.food-info p {
-    color: #d35400;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.qty-control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.qty-control button {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-    background: white;
-    cursor: pointer;
-}
-
-.btn-add-quick {
-    background: #27ae60;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    cursor: pointer;
-}
-.btn-add-quick:hover{
-transition: .4s;
-scale: 1.1;
-}
-
-@media (max-width: 900px) {
-    .checkout-container {
-        flex-direction: column;
+      background-color: #fdfaf5;
+      padding: 50px 0;
+      font-family: 'Arial', sans-serif;
+      color: #332d2d;
     }
+
+    .checkout-container {
+      display: flex;
+      max-width: 1300px;
+      margin: 0 auto;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
     .order-summary-aside {
+      flex: 0 0 350px;
+    }
+
+    .summary-sticky {
+      position: sticky;
+      top: 20px;
+      background: #ffffff;
+      border: 1px solid #e8e2d6;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    .aside-title {
+      margin-top: 0;
+      border-bottom: 2px solid #f1c40f;
+      padding-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .info-group {
+      margin-bottom: 15px;
+    }
+
+    .info-group label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .info-group textarea,
+    .info-group input,
+    .info-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      box-sizing: border-box;
+    }
+
+    .total-price-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+      padding: 15px 0;
+      border-top: 1px dashed #ccc;
+    }
+
+    .total-price-box strong {
+      font-size: 1.4rem;
+      color: #d35400;
+    }
+
+    .btn-main-pay {
+      width: 100%;
+      background: #d35400;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .btn-buy-more {
+      width: 100%;
+      background: transparent;
+      color: #666;
+      border: 1px solid #999;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cart-content-main {
+      flex: 1;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .food-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .food-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 150px;
+      background: #eee;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      margin-bottom: 15px;
+    }
+
+    .food-info h4 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .food-info p {
+      color: #d35400;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .qty-control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .qty-control button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      background: white;
+      cursor: pointer;
+    }
+
+    .btn-add-quick {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .btn-add-quick:hover {
+      transition: .4s;
+      scale: 1.1;
+    }
+
+    @media (max-width: 900px) {
+      .checkout-container {
+        flex-direction: column;
+      }
+
+      .order-summary-aside {
         flex: none;
         width: 100%;
+      }
     }
-}
-.logo{
-width: 60px;
-height: 60px;
-position: absolute;
-left: 2%;
-overflow: hidden;
 
-}
-.logo img{
-  background-position: center;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
+    .logo {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 2%;
+      overflow: hidden;
+
+    }
+
+    .logo img {
+      background-position: center;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    #btn-view-products {
+      width: 130px;
+      min-height: 40px;
+      border-radius: 15px;
+      background-color: transparent;
+      color: white;
+      transition: all 0.4s;
+      outline: none;
+      border: 1px solid white;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #btn-view-products:hover {
+      background-color: white;
+      color: black;
+      transition: all 0.4s;
+    }
   </style>
 </head>
 
@@ -676,116 +707,116 @@ overflow: hidden;
         trong từng khoảnh khắc
       </h1>
       <p>Cho bạn cảm giác mê ly khi trải nghiệm</p>
-      <button id="btn-view-products">Xem Giỏ Hàng</button>
+      <a id="btn-view-products" href="#checkout-section">Xem Giỏ Hàng</a>
     </div>
   </section>
-  <section class="checkout-section">
+  <section class="checkout-section" id="checkout-section">
     <div class="checkout-container">
-        
-        <aside class="order-summary-aside">
-            <div class="summary-sticky">
-                <h3 class="aside-title">Thông tin đơn hàng</h3>
-                
-                <div class="info-group">
-                    <label>Địa chỉ giao hàng</label>
-                    <textarea placeholder="Nhập địa chỉ của bạn..."></textarea>
-                </div>
 
-                <div class="info-group">
-                    <label>Thông tin liên lạc</label>
-                    <input type="text" placeholder="Số điện thoại">
-                </div>
+      <aside class="order-summary-aside">
+        <div class="summary-sticky">
+          <h3 class="aside-title">Thông tin đơn hàng</h3>
 
-                <div class="info-group">
-                    <label>Phương thức thanh toán</label>
-                    <select>
-                        <option>Tiền mặt khi nhận hàng</option>
-                        <option>Chuyển khoản ngân hàng</option>
-                        <option>Ví điện tử (Momo/ZaloPay)</option>
-                    </select>
-                </div>
+          <div class="info-group">
+            <label>Địa chỉ giao hàng</label>
+            <textarea placeholder="Nhập địa chỉ của bạn..."></textarea>
+          </div>
 
-                <div class="total-price-box">
-                    <span>Tổng tiền:</span>
-                    <strong>125.000đ</strong>
-                </div>
+          <div class="info-group">
+            <label>Thông tin liên lạc</label>
+            <input type="text" placeholder="Số điện thoại">
+          </div>
 
-                <div class="aside-buttons">
-                    <button class="btn-main-pay">XÁC NHẬN THANH TOÁN</button>
-                    <button class="btn-buy-more">TIẾP TỤC MUA THÊM</button>
-                </div>
+          <div class="info-group">
+            <label>Phương thức thanh toán</label>
+            <select>
+              <option>Tiền mặt khi nhận hàng</option>
+              <option>Chuyển khoản ngân hàng</option>
+              <option>Ví điện tử (Momo/ZaloPay)</option>
+            </select>
+          </div>
+
+          <div class="total-price-box">
+            <span>Tổng tiền:</span>
+            <strong>125.000đ</strong>
+          </div>
+
+          <div class="aside-buttons">
+            <button class="btn-main-pay">XÁC NHẬN THANH TOÁN</button>
+            <button class="btn-buy-more">TIẾP TỤC MUA THÊM</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="cart-content-main">
+        <h2 class="section-title">Sản phẩm đã chọn</h2>
+
+        <div class="items-grid">
+          <div class="food-card">
+            <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
+            <div class="food-info">
+              <h4>Cà Phê Muối</h4>
+              <p>45.000đ</p>
+              <div class="qty-control">
+                <button>-</button><span>01</span><button>+</button>
+              </div>
             </div>
-        </aside>
-
-        <main class="cart-content-main">
-            <h2 class="section-title">Sản phẩm đã chọn</h2>
-            
-            <div class="items-grid">
-                <div class="food-card">
-                    <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
-                    <div class="food-info">
-                        <h4>Cà Phê Muối</h4>
-                        <p>45.000đ</p>
-                        <div class="qty-control">
-                            <button>-</button><span>01</span><button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
-                    <div class="food-info">
-                        <h4>Espresso Đá</h4>
-                        <p>35.000đ</p>
-                        <div class="qty-control">
-                            <button>-</button><span>02</span><button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
-                    <div class="food-info">
-                        <h4>Latte nóng</h4>
-                        <p>45.000đ</p>
-                        <div class="qty-control">
-                            <button>-</button><span>01</span><button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="food-card">
-                    <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
-                    <div class="food-info">
-                        <h4>Trà Đào Cam Sả</h4>
-                        <p>40.000đ</p>
-                        <div class="qty-control">
-                            <button>-</button><span>01</span><button>+</button>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="food-card">
+            <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
+            <div class="food-info">
+              <h4>Espresso Đá</h4>
+              <p>35.000đ</p>
+              <div class="qty-control">
+                <button>-</button><span>02</span><button>+</button>
+              </div>
             </div>
-
-            <h2 class="section-title" style="margin-top: 50px;">Gợi ý món kèm</h2>
-            <div class="items-grid">
-                <div class="food-card suggestion">
-                    <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
-                    <div class="food-info">
-                        <h4>Bánh Sừng Bò</h4>
-                        <p>25.000đ</p>
-                        <button class="btn-add-quick">+ Thêm món</button>
-                    </div>
-                </div>
-                <div class="food-card suggestion">
-                    <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
-                    <div class="food-info">
-                        <h4>Donut Socola</h4>
-                        <p>20.000đ</p>
-                        <button class="btn-add-quick">+ Thêm món</button>
-                    </div>
-                </div>
+          </div>
+          <div class="food-card">
+            <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
+            <div class="food-info">
+              <h4>Latte nóng</h4>
+              <p>45.000đ</p>
+              <div class="qty-control">
+                <button>-</button><span>01</span><button>+</button>
+              </div>
             </div>
-        </main>
+          </div>
+          <div class="food-card">
+            <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
+            <div class="food-info">
+              <h4>Trà Đào Cam Sả</h4>
+              <p>40.000đ</p>
+              <div class="qty-control">
+                <button>-</button><span>01</span><button>+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 50px;">Gợi ý món kèm</h2>
+        <div class="items-grid">
+          <div class="food-card suggestion">
+            <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
+            <div class="food-info">
+              <h4>Bánh Sừng Bò</h4>
+              <p>25.000đ</p>
+              <button class="btn-add-quick">+ Thêm món</button>
+            </div>
+          </div>
+          <div class="food-card suggestion">
+            <div class="img-placeholder"> [ICON/IMG TẠI ĐÂY] </div>
+            <div class="food-info">
+              <h4>Donut Socola</h4>
+              <p>20.000đ</p>
+              <button class="btn-add-quick">+ Thêm món</button>
+            </div>
+          </div>
+        </div>
+      </main>
 
     </div>
-</section>
+  </section>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">

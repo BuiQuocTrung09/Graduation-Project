@@ -1,8 +1,11 @@
 <?php
+session_start();
+?>
+<?php
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "products";
+$database = "chillcafe_database";
 
 $conn = new mysqli($host, $user, $pass, $database);
 
@@ -10,7 +13,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$result = $conn->query("SELECT * FROM items");
+$result = $conn->query("SELECT * FROM products");
 
 if (!$result) {
   die("Lỗi" . $conn->error);
@@ -448,21 +451,23 @@ if (!$result) {
       color: rgb(0, 0, 0);
       scale: 1.1;
     }
-    .logo{
-width: 60px;
-height: 60px;
-position: absolute;
-left: 2%;
-overflow: hidden;
 
-}
-.logo img{
-  background-position: center;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
+    .logo {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 2%;
+      overflow: hidden;
+
+    }
+
+    .logo img {
+      background-position: center;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -546,8 +551,7 @@ overflow: hidden;
       while ($row = $result->fetch_assoc()) {
         echo "
                   <div class='product-card'>
-                  <img src='../picture/" . $row['product_image'] . "'>
-                  onerror=\"this.onerror=null;this.src='../picture/sanpham6.png';\"
+                  <img src='../picture/" . $row['product_img'] . "'>
                   <div class='product-info'>
                   <h4>" . $row['product_name'] . "</h4>
                   <p>" . $row['product_describe'] . "</p>
