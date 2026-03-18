@@ -30,7 +30,7 @@ function logout() {
     session_start();
     session_unset();
     session_destroy();
-    header("Location: 29-9-login.html");
+    header("Location: index.php");
     exit();
 }
 

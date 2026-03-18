@@ -89,11 +89,6 @@ session_start();
       </div>
     </div>
     <div class="roasting_box">
-      <!--    <p id="roasting_box_p2">
-          A warm cup of coffee cradled in both hands — its steam rises like a
-          quiet invitation, carrying soft notes of caramel, toasted almond, and
-          a whisper of citrus
-        </p> -->
       <div class="banner_coffee">
         <section class="banner_section">
           <div class="banner_container">
