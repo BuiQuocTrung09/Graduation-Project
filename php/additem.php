@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$database = "chillcafe_database";
+$database = "ChillCafe_database";
 
 $conn = new mysqli($host, $user, $pass, $database);
 if($conn->connect_error){
